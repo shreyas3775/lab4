@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Lab4 – Exercise 2</title>
+    </head>
+        <body>
+        <h1>JavaScript Lab</h1>
+            <script>
+            //Declaring Functions
+            /*
+            function add(x, y){
+                let sum = x + y;
+                return sum;
+            }
+            function subtract(x, y){
+                let diff = x - y;
+                return diff;
+            }
+            //testing add
+            console.log("Result of adding 4 and 8: " + add(4,8));
+            console.log("Result of adding -4 and 3: " + add(-4,3));
+
+            //testing subtract
+            console.log("Result of subtracting 4 from 5: " + subtract(5,4));
+            console.log("Result of subtracting 8 from 3: " + subtract(3,8));
+            */
+
+            //Using Default Parameters
+            /*
+            function add(x, y = 0){
+                let sum = x + y;
+                return sum;
+            }
+            function subtract(x, y = 5){
+                let diff = x - y;
+                return diff;
+            }
+
+            //testing add
+            console.log("Result of adding 4 with default value: " + add(4));
+            console.log("Result of adding -4 and 3: " + add(-4,3));
+
+            //testing subtract
+            console.log("Result of subtracting default value from 10: " + subtract(5));
+            console.log("Result of subtracting 8 from 3: " + subtract(3,8));
+            */
+
+            //Implementing Arrow Functions
+            let add = (x,y) => x + y;
+            let subtract = (x, y) => x - y;
+            let multiply = (x, y) => x*y;
+            let divide = (x, y) => {
+                if (y == 0){
+                    let errorMessage = "Error, division by zero";
+                    return errorMessage;
+                }
+                return x / y;
+            }
+
+            //testing add
+            console.log("Result of adding 5 and 2: " + add(5,2));
+            console.log("Result of adding -4 and 7: " + add(-4,7));
+
+            //testing subtract
+            console.log("Result of subtracting 2 from 5: " + subtract(5,2));
+            console.log("Result of subtracting 10 from 3: " + subtract(3,10));
+            
+            //testing multiply
+            console.log("Result of multiplying 3 and 2: " + multiply(3,2));
+            console.log("Reuslt of multiplying 5 and -2: " + multiply(5, -2));
+
+            //testing divide
+            console.log("Result of dividing 3 by 2: " + divide(3,2));
+            console.log("Result of divising 10 by 5: " + divide(10, 5));
+            console.log("Attempting to divide 10 by zero: " + divide(10, 0));
+            
+            //Understanding Callback Functions
+            function calculator(x, y , callback){
+                return callback(x, y);
+            }
+
+            //testing calculator function using numbers and the add function as the callback
+            console.log("Result of adding 3 and 5 with the calculator: " + calculator(3, 5, add));
+            
+            //testing calculator function with numebrs and multiple function
+            console.log("Result of multiplying 6 and -2 with the calculator: " + calculator(6, -2, multiply));
+
+
+            </script>
+
+
+        </body>
+    </html>

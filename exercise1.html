@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Lab4-Exercise 1</title>
+        </head>
+        <body>
+            <h1>JavaScript Lab</h1>
+            <script>
+                // Write your JavaScript code here
+                let var1 = 4;
+                let var2 = 6;
+                const var3 = 5; 
+                var1 = 12;
+                //var3 = 17; 
+                //console.log(var1);
+                //console.log(var2);
+                //console.log(var3);
+
+                //String Operations
+                let string1 = "Hello, World!";
+                let string2 = "JavaScript is fun!";
+                console.log(string1.length);
+                console.log(string1 + ' ' + string2);
+
+                string2 = string2.replace("fun", "awesome");
+                console.log(string2);
+
+                //String Templates
+                let name = "Alice";
+                let age = 25;
+
+                let string3 = `"My name is ${name} and I am ${age} years old"`;
+                console.log(string3);
+
+                //Working with Dates
+                var date = new Date(); //date object in JS
+                console.log(date);
+
+                console.log(date.getFullYear()); //Extracting and logging the year
+                console.log(date.getMonth()); //extracting and logging the month
+                let day = date.getDay();
+                console.log(day); //extracting day of the week 
+
+                var array_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturdary"];
+
+                console.log(array_week[day]) //using the day of the week, index into the array to get the day name
+            </script>
+        </body>
+    </html>
